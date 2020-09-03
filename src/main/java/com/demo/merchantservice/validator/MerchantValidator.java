@@ -20,7 +20,7 @@ public class MerchantValidator {
 
         final Merchant merchantByName = repository.findByName(merchant.getName());
 
-        if (merchantByName == null ){
+        if (merchantByName != null ){
             errorMessages.add(new ErrorMessage("Name", "Merchant name already in use"));
         }
         return errorMessages;
